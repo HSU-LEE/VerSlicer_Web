@@ -23,7 +23,7 @@ export const translations = {
           title: "모델 불러오기",
           desc: "OrcaSlicer와 같이 STL·3MF를 열고 프린터 프리셋을 선택합니다.",
         },
-        {
+        { 
           title: "원하는 결과 입력하기",
           desc: "채팅이나 음성으로 \"더 튼튼하게\", \"플레이트 정리해\"처럼 말합니다.",
         },
