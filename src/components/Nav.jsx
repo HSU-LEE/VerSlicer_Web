@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { asset } from "../constants/assets";
 import { useLanguage } from "../i18n/LanguageContext";
 import { NAV_ACTIVE_MAP, NAV_LINKS, SECTION_IDS } from "../i18n/translations";
 import { useActiveSection } from "../hooks/useActiveSection";
@@ -18,7 +19,7 @@ export default function Nav() {
       <nav className="nav">
         <div className="container nav__inner">
           <a href="#product" className="nav__brand" onClick={closeMenu}>
-            <img src="/assets/images/favicon.png" alt="" width="28" height="28" />
+            <img src={asset("assets/images/favicon.png")} alt="" width="28" height="28" />
             <span>VerSlicer</span>
           </a>
           <ul className="nav__links">

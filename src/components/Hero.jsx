@@ -1,3 +1,4 @@
+import { asset } from "../constants/assets";
 import { useLanguage } from "../i18n/LanguageContext";
 import { GITHUB_RELEASES_URL, GITHUB_URL } from "../constants/links";
 import ScreenFrame from "./ScreenFrame";
@@ -41,7 +42,7 @@ export default function Hero() {
           <div className="hero__visual-inner">
             <ScreenFrame
               className="screen-frame--hero"
-              src="/assets/images/screen-smart-print.png"
+              src={asset("assets/images/screen-smart-print.png")}
               alt="VerSlicer Smart Print"
             />
           </div>

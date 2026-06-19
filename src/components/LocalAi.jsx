@@ -1,3 +1,4 @@
+import { asset } from "../constants/assets";
 import { useLanguage } from "../i18n/LanguageContext";
 import ScreenFrame from "./ScreenFrame";
 
@@ -9,7 +10,7 @@ export default function LocalAi() {
     <section className="section local-ai" id="local-ai">
       <div className="container feature-row">
         <div className="feature-row__visual">
-          <ScreenFrame src="/assets/images/screen-ai-coach.png" alt="AI Coach" />
+          <ScreenFrame src={asset("assets/images/screen-ai-coach.png")} alt="AI Coach" />
         </div>
         <div className="feature-row__copy">
           <h2 className="section-title">{l.title}</h2>
