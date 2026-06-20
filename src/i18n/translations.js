@@ -37,6 +37,7 @@ export const translations = {
       title: "원하는 결과를 말해보세요",
       desc: "전문 지식 없이 말하기만으로 출력 결과를 조정할 수 있습니다.",
       chatLabel: "AI Assistant",
+      scrollHint: "옆으로 밀어 더 보기",
       items: [
         {
           title: "더 튼튼하게",
@@ -211,6 +212,7 @@ export const translations = {
       title: "Describe the outcome you want",
       desc: "Adjust print results just by speaking — no expert knowledge required.",
       chatLabel: "AI Assistant",
+      scrollHint: "Swipe for more",
       items: [
         {
           title: "Make it stronger",

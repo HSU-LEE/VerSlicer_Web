@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { asset } from "../constants/assets";
 import { useLanguage } from "../i18n/LanguageContext";
 import { NAV_ACTIVE_MAP, NAV_LINKS, SECTION_IDS } from "../i18n/translations";
@@ -13,6 +13,11 @@ export default function Nav() {
   const active = useActiveSection(SECTION_IDS);
   const navActive = NAV_ACTIVE_MAP[active] ?? active;
   const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("mobile-nav-open", menuOpen);
+    return () => document.body.classList.remove("mobile-nav-open");
+  }, [menuOpen]);
 
   return (
     <>
@@ -65,33 +70,62 @@ export default function Nav() {
         </div>
       </nav>
 
-      <div className={`mobile-menu${menuOpen ? " open" : ""}`}>
-        {NAV_LINKS.map(({ href, key }) => (
-          <a key={key} href={href} onClick={closeMenu}>
-            {t.nav[key]}
+      <div
+        className={`mobile-menu${menuOpen ? " open" : ""}`}
+        role="dialog"
+        aria-modal="true"
+        aria-hidden={!menuOpen}
+      >
+        <div className="mobile-menu__header">
+          <span className="mobile-menu__title">VerSlicer</span>
+          <button
+            type="button"
+            className="mobile-menu__close"
+            aria-label="Close menu"
+            onClick={closeMenu}
+          >
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+            </svg>
+          </button>
+        </div>
+
+        <nav className="mobile-menu__nav">
+          {NAV_LINKS.map(({ href, key, id }) => (
+            <a
+              key={key}
+              href={href}
+              className={navActive === id ? "active" : ""}
+              onClick={closeMenu}
+            >
+              {t.nav[key]}
+            </a>
+          ))}
+        </nav>
+
+        <div className="mobile-menu__actions">
+          <a
+            href={GITHUB_URL}
+            className="mobile-menu__github"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMenu}
+          >
+            <GitHubIcon size={18} />
+            GitHub
           </a>
-        ))}
-        <a
-          href={GITHUB_URL}
-          className="mobile-menu__github"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={closeMenu}
-        >
-          <GitHubIcon size={18} />
-          GitHub
-        </a>
-        <a
-          href={GITHUB_RELEASES_URL}
-          className="btn btn--primary"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={closeMenu}
-        >
-          {t.nav.download}
-        </a>
-        <div className="mobile-menu__lang">
-          <LangToggle />
+          <a
+            href={GITHUB_RELEASES_URL}
+            className="btn btn--primary"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMenu}
+          >
+            {t.nav.download}
+          </a>
+          <div className="mobile-menu__lang">
+            <LangToggle />
+          </div>
         </div>
       </div>
     </>
