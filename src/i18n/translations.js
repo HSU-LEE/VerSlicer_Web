@@ -105,9 +105,9 @@ export const translations = {
           href: "https://ollama.com/",
         },
         {
-          title: "Llama 3.2",
+          title: "Qwen2.5:3b",
           desc: "VerSlicer가 활용하는 기본 AI 모델입니다.",
-          href: "https://ollama.com/library/llama3.2",
+          href: "https://ollama.com/library/qwen2.5",
         },
         {
           title: "GitHub",
@@ -133,7 +133,7 @@ export const translations = {
         },
         {
           q: "어떤 AI 모델을 쓰나요?",
-          a: "기본적으로 Llama 3.2를 사용하며, Ollama에서 지원하는 다른 모델로 변경할 수 있습니다.",
+          a: "기본적으로 Qwen2.5:3b를 사용하며, Ollama에서 지원하는 다른 모델로 변경할 수 있습니다.",
         },
         {
           q: "OrcaSlicer와 무엇이 다른가요?",
@@ -153,12 +153,12 @@ export const translations = {
       requirements: [
         "macOS 11.3 이상 (Apple Silicon · Intel)",
         "Ollama 설치 및 실행",
-        "ollama pull llama3.2",
+        "ollama pull qwen2.5:3b",
         "Xcode CLT 또는 Xcode (소스 빌드 시)",
       ],
       buildNote: "다른 Mac에 배포할 때는 DMG 인스톨러를 만들 수 있습니다.",
       steps: [
-        { title: "Ollama 설치", desc: "ollama.com에서 설치 후 ollama pull llama3.2" },
+        { title: "Ollama 설치", desc: "ollama.com에서 설치 후 ollama pull qwen2.5:3b" },
         { title: "VerSlicer 설치", desc: "GitHub Releases에서 DMG 다운로드" },
         { title: "채팅 열기", desc: "3D 뷰 툴바에서 Ollama 채팅 실행" },
       ],
@@ -270,9 +270,9 @@ export const translations = {
           href: "https://ollama.com/",
         },
         {
-          title: "Llama 3.2",
+          title: "Qwen2.5:3b",
           desc: "The default AI model used by VerSlicer.",
-          href: "https://ollama.com/library/llama3.2",
+          href: "https://ollama.com/library/qwen2.5",
         },
         {
           title: "GitHub",
@@ -298,7 +298,7 @@ export const translations = {
         },
         {
           q: "Which AI model does it use?",
-          a: "Llama 3.2 by default. You can switch to other models supported by Ollama.",
+          a: "Qwen2.5:3b by default. You can switch to other models supported by Ollama.",
         },
         {
           q: "How is this different from OrcaSlicer?",
@@ -317,12 +317,12 @@ export const translations = {
       requirements: [
         "macOS 11.3 or later (Apple Silicon · Intel)",
         "Ollama installed and running",
-        "ollama pull llama3.2",
+        "ollama pull qwen2.5:3b",
         "Xcode CLT or Xcode (for source builds)",
       ],
       buildNote: "You can build a DMG installer to deploy to another Mac.",
       steps: [
-        { title: "Install Ollama", desc: "Install from ollama.com, then run ollama pull llama3.2" },
+        { title: "Install Ollama", desc: "Install from ollama.com, then run ollama pull qwen2.5:3b" },
         { title: "Install VerSlicer", desc: "Download the DMG from GitHub Releases" },
         { title: "Open chat", desc: "Launch Ollama chat from the 3D view toolbar" },
       ],
