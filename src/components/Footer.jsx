@@ -1,6 +1,6 @@
 import { useLanguage } from "../i18n/LanguageContext";
 
-const CONTACT_EMAIL = "harry.srobot.2011@gmail.com";
+const CONTACT_EMAIL = "harrison.lee.hsu@gmail.com";
 
 export default function Footer() {
   const { t } = useLanguage();
