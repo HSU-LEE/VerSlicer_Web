@@ -1,6 +1,6 @@
 import { asset } from "../constants/assets";
 import { useLanguage } from "../i18n/LanguageContext";
-import { GITHUB_RELEASES_URL, GITHUB_URL } from "../constants/links";
+import { GITHUB_RELEASES_URL, GITHUB_URL, VERSLICER_VERSION } from "../constants/links";
 import ScreenFrame from "./ScreenFrame";
 
 export default function Hero() {
@@ -16,15 +16,15 @@ export default function Hero() {
           <p className="hero__lead">{h.lead}</p>
           <div className="hero__cta">
             <a
-              href="https://github.com/HSU-LEE/VerSlicer/releases"
+              href={GITHUB_RELEASES_URL}
               className="btn btn--primary btn--lg"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {h.downloadBtn}
+              {h.downloadBtn} v{VERSLICER_VERSION}
             </a>
             <a
-              href="https://github.com/HSU-LEE/VerSlicer"
+              href={GITHUB_URL}
               className="btn btn--outline btn--lg"
               target="_blank"
               rel="noopener noreferrer"
