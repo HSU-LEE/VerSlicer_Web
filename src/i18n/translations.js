@@ -65,6 +65,12 @@ export const translations = {
           reply: "HMS 알림으로 보아 첫 레이어 접착 문제일 가능성이 큽니다. 베드 온도와 첫 레이어 속도를 확인해 보세요.",
         },
         {
+          title: "출력 전 점검",
+          desc: "실패할 수 있는 부위를 3D 화면에 표시하고 해결 방법을 알려줍니다.",
+          example: "이거 잘 뽑힐까?",
+          reply: "오버행 두 곳을 빨간색으로 표시했습니다. 서포트를 켜면 해결됩니다.",
+        },
+        {
           title: "자동 배치",
           desc: "플레이트 위 모델을 효율적으로 정리합니다.",
           example: "플레이트 정리해",
@@ -140,7 +146,7 @@ export const translations = {
         },
         {
           q: "Bambu Lab 프린터로 출력하려면 Developer Mode가 필요한가요?",
-          a: "필요 없습니다. 기본 출력 방식인 Print with Bambu Connect가 슬라이스한 파일을 Bambu Connect(무료, macOS 13 이상)로 넘깁니다. LAN 모드와 Developer Mode를 쓰는 경우 Print plate로 직접 보낼 수도 있습니다.",
+          a: "필요 없습니다. 기본 출력 방식인 Print with Bambu Connect가 슬라이스한 파일을 Bambu Connect(무료, macOS 13 이상)로 넘기며, Bambu Connect가 없으면 VerSlicer가 설치하고 최신 상태로 유지합니다. LAN 모드와 Developer Mode를 쓰는 경우 Print plate로 직접 보낼 수도 있습니다.",
         },
         {
           q: "\"손상되었기 때문에 열 수 없습니다\"라고 나와요.",
@@ -163,7 +169,7 @@ export const translations = {
       requirements: [
         "macOS 11.3 이상 (Apple Silicon)",
         "ChatGPT Plus 또는 Pro 계정 (AI 어시스턴트)",
-        "Bambu Connect (Bambu Lab 프린터, macOS 13 이상)",
+        "Bambu Connect (Bambu Lab 프린터, macOS 13 이상 · VerSlicer가 자동 설치)",
       ],
       buildNote: "아직 서명되지 않은 릴리스라 첫 실행이 차단되면, 오른쪽 명령을 터미널에 붙여 넣고 VerSlicer를 다시 여세요.",
       steps: [
@@ -247,6 +253,12 @@ export const translations = {
           reply: "The HMS alerts point to first-layer adhesion. Check bed temperature and first-layer speed.",
         },
         {
+          title: "Pre-print check",
+          desc: "Highlights where the model may fail on the 3D view and suggests fixes.",
+          example: "Will this print well?",
+          reply: "Two overhangs are marked in red. Turning on supports fixes them.",
+        },
+        {
           title: "Auto-arrange",
           desc: "Organize models efficiently on the build plate.",
           example: "Arrange the plate",
@@ -318,7 +330,7 @@ export const translations = {
         },
         {
           q: "Do I need Developer Mode on my Bambu Lab printer?",
-          a: "No. Print with Bambu Connect, the default, hands the sliced file to Bambu Connect (free, macOS 13 or later). If your printer is in LAN mode with Developer Mode on, Print plate sends directly.",
+          a: "No. Print with Bambu Connect, the default, hands the sliced file to Bambu Connect (free, macOS 13 or later); if it is missing, VerSlicer installs it and keeps it up to date. If your printer is in LAN mode with Developer Mode on, Print plate sends directly.",
         },
         {
           q: "macOS says VerSlicer is damaged or can’t be opened.",
@@ -341,7 +353,7 @@ export const translations = {
       requirements: [
         "macOS 11.3 or later (Apple Silicon)",
         "ChatGPT Plus or Pro account (for the AI assistant)",
-        "Bambu Connect (Bambu Lab printers, macOS 13 or later)",
+        "Bambu Connect (Bambu Lab printers, macOS 13 or later · installed by VerSlicer)",
       ],
       buildNote: "Releases aren’t signed yet. If macOS blocks the first launch, paste the command on the right into Terminal and open VerSlicer again.",
       steps: [
