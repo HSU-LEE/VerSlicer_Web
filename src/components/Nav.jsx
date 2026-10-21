@@ -35,6 +35,9 @@ export default function Nav() {
                 </a>
               </li>
             ))}
+            <li>
+              <a href={asset("wiki/")}>{t.nav.wiki}</a>
+            </li>
           </ul>
           <div className="nav__actions">
             <LangToggle />
@@ -101,6 +104,9 @@ export default function Nav() {
               {t.nav[key]}
             </a>
           ))}
+          <a href={asset("wiki/")} onClick={closeMenu}>
+            {t.nav.wiki}
+          </a>
         </nav>
 
         <div className="mobile-menu__actions">

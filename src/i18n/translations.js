@@ -6,6 +6,7 @@ export const translations = {
       features: "기능",
       ecosystem: "생태계",
       install: "설치",
+      wiki: "위키",
       download: "다운로드",
     },
     hero: {
@@ -187,6 +188,7 @@ export const translations = {
       features: "Features",
       ecosystem: "Ecosystem",
       install: "Install",
+      wiki: "Wiki",
       download: "Download",
     },
     hero: {
